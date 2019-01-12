@@ -4,6 +4,7 @@
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
 @import '../../libs/nouislider/distribute/nouislider.min.css'
+@import '../../libs/slick-carousel/slick/slick.css'
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic')
 
 
@@ -82,11 +83,17 @@ input, textarea, button
 	position: relative
 	&__wrap
 		display: block
-		font-size: $font-size
-		font-family: $font-family-1
+		font-size: 14px
+		font-family: $font-family-2
 		background: white
 		width: 100%
 		resize: none
+		padding: 7px 10px
+		border: 2px solid #f3a51c
+		background-color: #ffffff
+		&::placeholder
+			opacity: 1
+			color: #919191
 
 .btn
 	position: relative
@@ -235,7 +242,7 @@ input, .btn, .slick-slide, textarea
 
 .header
 	padding-top: 40px
-	padding-bottom: 60px
+	padding-bottom: 35px
 	background: url('../../img/bg/header.png') no-repeat center top
 	background-size: cover
 	position: relative
@@ -256,7 +263,6 @@ input, .btn, .slick-slide, textarea
 		flex-wrap: wrap
 		justify-content: center
 		padding-top: 16px
-		margin-bottom: 40px
 		p
 			margin-right: 60px
 			&:last-of-type
@@ -269,7 +275,8 @@ input, .btn, .slick-slide, textarea
 	&__wrap
 		padding-left: 25px
 		padding-right: 30px
-
+		margin-top: 40px
+		padding-bottom: 25px
 	&__text
 		text-shadow: 1px 0 0 rgba(43, 22, 18, 0.29)
 		max-width: 726px
@@ -343,6 +350,7 @@ input, .btn, .slick-slide, textarea
 	padding-top: 50px
 	&__title
 		margin-bottom: 26px
+
 	&__list
 		justify-content: space-between
 	&__item
@@ -350,6 +358,10 @@ input, .btn, .slick-slide, textarea
 		margin-bottom: 60px
 	&__img
 		margin-bottom: 20px
+		height: 330px
+		display: flex
+		align-items: center
+		justify-content: center
 
 	&__name
 		font-size: 17px
@@ -359,6 +371,9 @@ input, .btn, .slick-slide, textarea
 		padding-left: 25px
 		padding-right: 25px
 		margin-bottom: 20px
+		a
+			&:hover
+				border-color: $color-1
 
 	&__price
 		cursor: default
@@ -368,7 +383,74 @@ input, .btn, .slick-slide, textarea
 		margin-right: auto
 
 		
+.content
+	padding-bottom: 50px
+	&__title
+		padding-top: 10px
+		margin-bottom: 10px
 
+.articles
+	&__list
+		padding-top: 10px
+	&__item
+		margin-bottom: 20px
+	&__img
+		width: 160px
+		height: 160px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+	&__content
+		width: calc(100% - 160px)
+		padding-left: 20px
+	&__name
+		font-size: 22px
+		margin-bottom: 8px
+		a
+			&:hover
+				border-color: $color-1
+
+	&__text
+		margin-bottom: 12px
+		
+	&__more
+		width: 200px
+		margin-left: auto
+
+
+.pagination
+	ul
+		justify-content: center
+		align-items: center
+	li
+		margin-left: 1.5px
+		margin-right: 1.5px
+		&.selected
+			a
+				background-color: #f1af43
+		&.next, &.prev
+			a
+				background-color: transparent
+				height: auto
+				padding-left: 0
+				padding-right: 0
+				&:hover
+					border-color: $color-1
+		&.prev
+			margin-right: 20px
+		&.next
+			margin-left: 20px
+	a
+		padding-left: 12px
+		padding-right: 12px
+		height: 34px
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-top: 4px
+		&:hover
+			background-color: #f1af43
+		
 
 .order
 	padding-bottom: 70px
@@ -439,9 +521,9 @@ input, .btn, .slick-slide, textarea
 		sup
 			font-size: 10px
 	&__input
-		width: 120px
+		width: 110px
 	&__range
-		width: 155px
+		width: 180px
 		margin-left: auto
 	&_small
 		.arrea
@@ -461,6 +543,189 @@ input, .btn, .slick-slide, textarea
 	&__text
 		a[href^="mailto"]
 			color: #d68e16
+
+
+.breadcrumbs
+	padding-top: 37px
+	margin-bottom: 15px
+	&__wrap
+		height: 43px
+		display: flex
+		align-items: center
+		background: url('../../img/bg/breadcrumbs.png') no-repeat center
+	li
+		font-size: 14px
+		&:before
+			content: '\\'
+			margin-left: 6px
+			margin-right: 6px
+		&:first-of-type
+			&:before
+				display: none
+	a
+		color: #45300c
+		&:hover
+			border-color: #45300c
+
+
+
+.main-title
+	font-size: 28px
+	line-height: 30px
+	color: #45300c
+	font-weight: 700
+
+.product
+	padding-bottom: 55px
+	&__content
+		width: calc(100% - 300px)
+		padding-right: 65px
+	&__title
+		padding-top: 20px
+	&__data
+		
+
+	&__image
+		width: 300px
+	
+	&__text
+		margin-top: 30px
+
+.data
+	&__list
+		width: 365px
+		padding-top: 15px
+	&__item
+		display: flex
+		flex-wrap: wrap
+		font-size: 14px
+		margin-bottom: 4px
+		&:last-of-type
+			margin-bottom: 0
+		p
+			&:nth-of-type(1)
+				width: 165px
+				position: relative
+				padding-left: 26px
+				&:before
+					content: ''
+					@include sprite($polygon)
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+
+	&__wrap
+		width: 150px
+		margin-left: auto
+		text-align: center
+	&__price
+		font-size: 26px
+		font-weight: 700
+		color: #a5452b
+		margin-bottom: 4px
+
+.text
+	font-size: 17px
+	line-height: 26px
+	color: #48200f
+	p
+		margin-bottom: 10px
+	h2
+		display: block
+		font-size: 22px
+		line-height: 25px
+		font-weight: 700
+		margin-bottom: 8px
+	h3
+		display: block
+		font-size: 20px
+		line-height: 22px
+		font-weight: 700
+		margin-bottom: 5px
+	h4
+		display: block
+		font-size: 18px
+		line-height: 21px
+		font-weight: 700
+		margin-bottom: 2px
+	ol
+		padding-left: 15px
+		margin-bottom: 10px
+		li
+			display: list-item
+			list-style-type: desc
+	ul
+		margin-bottom: 10px
+		li
+			width: 100%
+			position: relative
+			padding-left: 16px
+			&:before
+				content: ''
+				position: absolute
+				top: 10px
+				left: 0
+				width: 5px
+				height: 5px
+				background-color: #f1af43
+	table
+		width: 100%
+		text-align: center
+		border-collapse: collapse
+		margin-bottom: 10px
+		thead
+			th, td
+				color: #fff
+				background-color: #421c08
+				font-weight: 700
+		tbody
+			th, td
+
+		th, td
+			padding: 5px 7px
+			border: 1px solid #421c08
+			font-size: 15px
+
+
+.gallery
+	font-size: 0
+	&__img
+		margin-bottom: 15px
+		&-item
+			position: relative
+			height: 300px
+		&-wrap
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+	&__imgs
+		margin-left: -4px
+		margin-right: -4px
+		&:after
+			content: ''
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 25px
+			@include sprite($zoom)
+		&-item
+			position: relative
+			height: 93px
+		&-wrap
+			position: absolute
+			top: 0
+			left: 4px
+			right: 4px
+			bottom: 0
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
 
 
 .footer
@@ -499,6 +764,40 @@ input, .btn, .slick-slide, textarea
 
 	&__nav, &__contacts
 		padding-left: 7px
+
+
+
+
+.popup
+	display: none
+	font-family: $font-family-1
+	&_small
+		padding: 20px 20px 30px
+		width: 380px
+	&__title
+		text-align: center
+		margin-bottom: 20px
+	&__input
+		margin-bottom: 10px
+	&__select
+		margin-bottom: 10px
+	p
+		font-size: 14px
+		margin-bottom: 3px
+
+	&__textarea
+		.textarea__wrap
+			height: 90px
+
+	&__btn
+		margin-top: 20px
+		margin-left: auto
+		margin-right: auto
+		width: 200px
+
+	&__text
+		text-align: center
+		
 
 .hidden-lg
 	display: none

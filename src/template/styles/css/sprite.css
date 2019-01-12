@@ -1,17 +1,29 @@
 .icon-doc {
   background-image: url(../../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -50px 0px;
   width: 28px;
   height: 31px; }
 
 .icon-phone {
   background-image: url(../../img/sprite.png);
-  background-position: -28px -14px;
+  background-position: -15px -50px;
   width: 14px;
   height: 12px; }
 
+.icon-polygon {
+  background-image: url(../../img/sprite.png);
+  background-position: -50px -31px;
+  width: 19px;
+  height: 18px; }
+
 .icon-time {
   background-image: url(../../img/sprite.png);
-  background-position: -28px 0px;
+  background-position: 0px -50px;
   width: 15px;
   height: 14px; }
+
+.icon-zoom {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px 0px;
+  width: 50px;
+  height: 50px; }

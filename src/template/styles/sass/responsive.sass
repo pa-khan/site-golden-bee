@@ -1,7 +1,69 @@
 @media screen and (max-width: 1199px)
 	.case
 		width: 950px
-	
+
+	.header
+		padding-top: 20px
+		padding-bottom: 20px
+		&__logo
+			margin-bottom: 15px
+		&__nav
+			
+		&__wrap
+			padding-bottom: 10px
+			margin-top: 20px
+		&__text
+			text-align: center
+			margin-left: auto
+			margin-right: auto
+		&__btn
+			margin-top: 15px
+			margin-left: auto
+			margin-right: auto
+
+	.header
+		
+
+	.production
+		background: none
+		&__content
+			padding-left: 20px
+		&__btn
+			margin-top: 12px
+
+	.catalog
+		&__item
+			width: 295px
+			margin-bottom: 40px
+		&__img
+			margin-bottom: 15px
+			height: 295px
+		&__name
+			padding-left: 0
+			padding-right: 0
+			margin-bottom: 15px
+
+	.order
+		&__col
+			padding-top: 0
+			&:nth-of-type(1)
+				margin-left: 0
+				width: 70%
+				.order
+					&__title
+						padding-left: 0
+						text-align: center
+			&:nth-of-type(2)
+				width: 30%
+		&__title
+			margin-bottom: 20px
+
+	.calc
+		&__left
+			margin-right: 30px
+			width: 250px
+		&__price
+			margin-top: 34px
 	.hidden-lg
 		display: block
 	
@@ -13,12 +75,52 @@
 @media screen and (max-width: 992px)
 	.case
 		width: 750px
+	.order
+		&__col
+			&:nth-of-type(1)
+				width: 60%
+				padding-right: 30px
+			&:nth-of-type(2)
+				width: 40%
+				padding-left: 30px
+
+	.calc
+		&__img
+			display: none
+		&__left
+			order: 2
+			margin-top: 20px
+			width: 310px
+		&__left, &__right
+			margin-left: auto
+			margin-right: auto
+
+		&__btn
+			width: 100%
+			
+
+	.main-title
+		font-size: 23px
+		line-height: 24px
+		margin-bottom: 10px
+	.data
+		&__wrap
+			margin-right: auto
+			margin-top: 20px
+
+	.product
+		&__content
+			padding-right: 15px
+		&__text
+			margin-top: 20px
 
 	.hidden-md
 		display: block		
 	
 	.hidden-sm
 		display: none
+
+
 
 
 	
@@ -31,5 +133,150 @@
 	
 	.hidden-xs
 		display: none
+
+	.header
+		&__logo
+			max-width: 320px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 10px
+		&__desc
+			font-size: 16px
+			line-height: 22px
+			br
+				display: none
+		&__contacts
+			text-align: center
+			padding-top: 10px
+			p
+				width: 100%
+				margin-right: 0
+		&__wrap
+			padding-left: 0
+			padding-right: 0
+			
+	.nav
+		width: 100%
+		max-width: 600px
+		li
+			width: 100%
+			text-align: center
+			margin-right: 0
 	
 
+	.production
+		padding-top: 20px
+		&__img
+			width: 280px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 10px
+		&__content
+			width: 100%
+			padding-left: 0
+
+	.catalog
+		padding-top: 40px
+		&__title
+			margin-bottom: 20px
+
+		&__item
+			width: 280px
+			margin-left: auto
+			margin-right: auto
+
+		&__img
+			height: 280px
+
+	.order
+		padding-bottom: 30px
+		&__wrap
+			display: block
+		&__col
+			width: 100% !important
+			padding-left: 0 !important
+			padding-right: 0 !important
+			&:before
+				display: none
+			&:nth-of-type(2)
+				margin-top: 20px
+				text-align: center
+
+
+	.calc
+		&__left, &__right
+			width: 100%
+		&__right
+			padding-top: 0
+		&__price
+			margin-top: 15px
+
+	.params
+		&__arrea
+			margin-bottom: 10px
+		&__select
+			margin-top: 10px
+			margin-bottom: 10px
+
+
+	.arrea
+		&__range
+			width: calc(100% - 135px)
+
+	.title
+		font-size: 22px
+
+	.product
+		&__content
+			order: 2
+			width: 100%
+		&__image
+			width: 280px
+			margin-left: auto
+			margin-right: auto
+
+	.breadcrumbs
+		padding-top: 20px
+		&__wrap
+			background-size: cover
+			padding-top: 14px
+			padding-bottom: 12px
+			height: auto
+
+	.gallery
+		&__imgs
+			&:after
+				display: none
+
+	.footer
+		padding-bottom: 10px
+		&__col
+			width: 100%
+			margin-bottom: 20px
+			padding-left: 0
+			padding-right: 0
+			br
+				display: none
+
+		&__title
+			margin-bottom: 10px
+
+	.content
+		padding-bottom: 20px
+	.pagination
+		display: none
+
+
+@media screen and (max-width: 420px)
+	.articles
+		&__img
+			width: 280px
+			height: 280px
+			margin-left: auto
+			margin-right: auto
+		&__content
+			padding-left: 0
+			width: 100%
+			padding-top: 10px
+		&__more
+			margin-right: auto

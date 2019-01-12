@@ -9,43 +9,65 @@
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites
 $doc-name: 'doc'
-$doc-x: 0px
+$doc-x: 50px
 $doc-y: 0px
-$doc-offset-x: 0px
+$doc-offset-x: -50px
 $doc-offset-y: 0px
 $doc-width: 28px
 $doc-height: 31px
-$doc-total-width: 43px
-$doc-total-height: 31px
+$doc-total-width: 78px
+$doc-total-height: 64px
 $doc-image: '../../img/sprite.png'
-$doc: (0px, 0px, 0px, 0px, 28px, 31px, 43px, 31px, '../../img/sprite.png', 'doc', )
+$doc: (50px, 0px, -50px, 0px, 28px, 31px, 78px, 64px, '../../img/sprite.png', 'doc', )
 $phone-name: 'phone'
-$phone-x: 28px
-$phone-y: 14px
-$phone-offset-x: -28px
-$phone-offset-y: -14px
+$phone-x: 15px
+$phone-y: 50px
+$phone-offset-x: -15px
+$phone-offset-y: -50px
 $phone-width: 14px
 $phone-height: 12px
-$phone-total-width: 43px
-$phone-total-height: 31px
+$phone-total-width: 78px
+$phone-total-height: 64px
 $phone-image: '../../img/sprite.png'
-$phone: (28px, 14px, -28px, -14px, 14px, 12px, 43px, 31px, '../../img/sprite.png', 'phone', )
+$phone: (15px, 50px, -15px, -50px, 14px, 12px, 78px, 64px, '../../img/sprite.png', 'phone', )
+$polygon-name: 'polygon'
+$polygon-x: 50px
+$polygon-y: 31px
+$polygon-offset-x: -50px
+$polygon-offset-y: -31px
+$polygon-width: 19px
+$polygon-height: 18px
+$polygon-total-width: 78px
+$polygon-total-height: 64px
+$polygon-image: '../../img/sprite.png'
+$polygon: (50px, 31px, -50px, -31px, 19px, 18px, 78px, 64px, '../../img/sprite.png', 'polygon', )
 $time-name: 'time'
-$time-x: 28px
-$time-y: 0px
-$time-offset-x: -28px
-$time-offset-y: 0px
+$time-x: 0px
+$time-y: 50px
+$time-offset-x: 0px
+$time-offset-y: -50px
 $time-width: 15px
 $time-height: 14px
-$time-total-width: 43px
-$time-total-height: 31px
+$time-total-width: 78px
+$time-total-height: 64px
 $time-image: '../../img/sprite.png'
-$time: (28px, 0px, -28px, 0px, 15px, 14px, 43px, 31px, '../../img/sprite.png', 'time', )
-$spritesheet-width: 43px
-$spritesheet-height: 31px
+$time: (0px, 50px, 0px, -50px, 15px, 14px, 78px, 64px, '../../img/sprite.png', 'time', )
+$zoom-name: 'zoom'
+$zoom-x: 0px
+$zoom-y: 0px
+$zoom-offset-x: 0px
+$zoom-offset-y: 0px
+$zoom-width: 50px
+$zoom-height: 50px
+$zoom-total-width: 78px
+$zoom-total-height: 64px
+$zoom-image: '../../img/sprite.png'
+$zoom: (0px, 0px, 0px, 0px, 50px, 50px, 78px, 64px, '../../img/sprite.png', 'zoom', )
+$spritesheet-width: 78px
+$spritesheet-height: 64px
 $spritesheet-image: '../../img/sprite.png'
-$spritesheet-sprites: ($doc, $phone, $time, )
-$spritesheet: (43px, 31px, '../../img/sprite.png', $spritesheet-sprites, )
+$spritesheet-sprites: ($doc, $phone, $polygon, $time, $zoom, )
+$spritesheet: (78px, 64px, '../../img/sprite.png', $spritesheet-sprites, )
 
 // The provided mixins are intended to be used with the array-like variables
 //
@@ -103,5 +125,9 @@ $spritesheet: (43px, 31px, '../../img/sprite.png', $spritesheet-sprites, )
     @include sprite($doc)
   &phone
     @include sprite($phone)
+  &polygon
+    @include sprite($polygon)
   &time
     @include sprite($time)
+  &zoom
+    @include sprite($zoom)

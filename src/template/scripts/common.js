@@ -21,4 +21,55 @@ $(document).ready(function($) {
 			}  
 		}
 	});
+
+	var square = $('#square-arrea'),
+			price = $('.calc__price span'),
+			koeff = $('#koeff'),
+			money = 0;
+
+	$('.calc__btn').click(function(event) {
+		var heightArreaVal = heightArrea.val(),
+				widthArreaVal = widthArrea.val(),
+				koeffVal = koeff.val(),
+				squareVal = (heightArreaVal * widthArreaVal) / 100;
+
+		if (koeffVal == 1) {
+			money = 250;
+		} else if (koeffVal == 2) {
+			money = 450;
+		} else if (koeffVal == 3) {
+			money = 700;
+		}
+
+		if(heightArreaVal == "0.00" || widthArreaVal == "0.00"){
+			price.html(((square.val() * money) + " руб.").replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));	
+		} else{
+			square.val(squareVal);
+			price.html(((squareVal * money) + " руб.").replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));	
+		}
+		
+	});
+
+	var galleryImg = $('.gallery__img'),
+			galleryImgs = $('.gallery__imgs');
+
+	galleryImg.slick({
+		slidesToShow: 1,
+		asNavFor: galleryImgs,
+		arrows: false
+	})
+	galleryImgs.slick({
+		slidesToShow: 3,
+		asNavFor: galleryImg,
+		arrows: false,
+		focusOnSelect: true
+	})
+
+	$("a[href^='#']").click(function(){
+    var _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
+    return false;
+	});
+
+
 });

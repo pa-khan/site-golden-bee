@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="template/styles/css/responsive.css" />
 	<script src="template/scripts/libs.js"></script>
 	<script src="template/scripts/common.js"></script>
+	 <link rel="shortcut icon" href="upload/favicon.png" type="image/png">
+
 	<!--[if lt IE 9]>
 	<script>
 		document.createElement('header');
@@ -43,7 +45,7 @@
 					<div class="header__title title">Научно-производственное предприятие «Golden Bee»</div>
 					<div class="header__desc">Превратить слиток золота в золотой лист тоньше паутины— особая наука, создать этот лист качественным и долговечным – истинное искусство. Мы собрали по крупицам многовековое знание создания сусального золота, внедрили современные методы производства и в результате получили идеальный для золочения материал. <br>Компания способна создавать любые виды сусальных металлов</div>
 				</div>
-				<a href="" class="header__btn btn btn_yellow btn_normal btn_hover-white"><i class="icon icon-doc"></i><span>Расчет стоимости золочения</span></a>
+				<a href="#order" class="header__btn btn btn_yellow btn_normal btn_hover-white"><i class="icon icon-doc"></i><span>Расчет стоимости золочения</span></a>
 			</div>
 		</div>
 	</header>
@@ -59,7 +61,7 @@
 						<div class="production__text">Превратить слиток золота в золотой лист тоньше паутины— особая наука, создать этот лист качественным и долговечным – истинное искусство. Мы собрали по крупицам многовековое знание создания сусального золота, внедрили современные методы производства и в результате получили идеальный для золочения материал. Компания способна создавать любые виды сусальных металлов</div>
 					</div>
 				</div>
-				<a href="" class="production__btn btn btn_orange btn_normal btn_hover-yellow"><span>Получить пробник бесплатно</span></a>
+				<a data-fancybox data-src="#popup-tester" href="javascript:;" class="production__btn btn btn_orange btn_normal btn_hover-yellow"><span>Получить пробник бесплатно</span></a>
 			</div>
 		</div>
 		<div class="catalog">
@@ -68,32 +70,32 @@
 				<div class="catalog__list row">
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 					<div class="catalog__item">
 						<div class="catalog__img"><img src="upload/production/1.png" alt=""></div>
-						<div class="catalog__name">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</div>
+						<div class="catalog__name"><a href="">Сусальное золото (ГОСТ) в книжке 1.4 гр, 23.75 карат — (60 листов)</a></div>
 						<div class="catalog__price btn btn_yellow btn_normal"><span>Цена: от 6300 руб.</span></div>
 					</div>
 				</div>
@@ -103,11 +105,11 @@
 			<div class="case">
 				<div class="order__wrap row">
 					<div class="order__col">
-						<div class="order__title title">Рассчитаем заказ!</div>
+						<div class="order__title title" id="order">Рассчитаем заказ!</div>
 						<div class="calc row">
 							<div class="calc__left">
 								<div class="calc__img"><img src="upload/box.png" alt=""></div>
-								<div class="calc__btn btn btn_orange btn_normal"><span>Расчет стоимости золочения</span></div>
+								<div class="calc__btn btn btn_orange btn_normal btn_hover-yellow"><span>Расчет стоимости золочения</span></div>
 							</div>
 							<div class="calc__right">
 								<div class="calc__params params">
@@ -124,11 +126,11 @@
 												step: 1,
 												range: {
 													'min': [0],
-													'max': [10]
+													'max': [1000]
 												}
 											})
 											heightSlider.noUiSlider.on('update', function(values, handle) {
-												if(values[handle] != 0) heightArrea.val(values[handle]);
+												heightArrea.val(values[handle]);
 											});
 											heightArrea
 										</script>
@@ -146,11 +148,11 @@
 												step: 1,
 												range: {
 													'min': [0],
-													'max': [10]
+													'max': [1000]
 												}
 											})
 											widthSlider.noUiSlider.on('update', function(values, handle) {
-												if(values[handle] != 0) widthArrea.val(values[handle]);
+												widthArrea.val(values[handle]);
 											});
 											widthArrea
 										</script>
@@ -168,30 +170,31 @@
 												step: 1,
 												range: {
 													'min': [0],
-													'max': [100]
+													'max': [1000]
 												}
 											})
 											lengthSlider.noUiSlider.on('update', function(values, handle) {
-												if(values[handle] != 0) lengthArrea.val(values[handle]);
+												lengthArrea.val(values[handle]);
 											});
 											lengthArrea
 										</script>
 									</div>
 									<div class="params__select select">
-										<select data-placeholder="Коэфф, сложности">
-											<option value="">1</option>
-											<option value="">2</option>
-											<option value="">3</option>
+										<select data-placeholder="Коэфф, сложности" id="koeff">
+											<option value="0"></option>
+											<option value="1">Плоскость - 250 руб</option>
+											<option value="2">Средняя - 450 руб.</option>
+											<option value="3">Барочка - 700 руб.</option>
 										</select>
 									</div>
-									<div class="params__arrea arrea arrea_small row">
+									<div class="params__arrea arrea row">
 										<div class="arrea__title">Площадь, дм<sup>2</sup></div>
 										<div class="arrea__input input">
-											<input type="text" class="input__wrap" placeholder="12.5">
+											<input type="text" class="input__wrap" placeholder="0" id="square-arrea">
 										</div>
 									</div>
 								</div>
-								<div class="calc__price">Cтоимость золочения: <span>10 000 руб.</span></div>
+								<div class="calc__price">Cтоимость золочения: <span>0 руб.</span></div>
 							</div>
 						</div>
 					</div>
@@ -259,6 +262,18 @@
 			</div>
 		</div>
 	</footer>
+</div>
+<div class="popup popup_small" id="popup-tester">
+	<div class="popup__title title">Получить пробник</div>
+	<div class="popup__wrap">
+		<div class="popup__input input">
+			<input type="text" class="input__wrap" placeholder="ФИО">
+		</div>
+		<div class="popup__input input input_phone">
+			<input type="text" class="input__wrap" placeholder="Ваш номер телефона">
+		</div>
+		<button class="popup__btn btn btn_normal btn_yellow btn_hover-orange"><span>Отправить заявку</span></button>
+	</div>
 </div>
 </body>
 </html>
